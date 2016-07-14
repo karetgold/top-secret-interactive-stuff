@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+        <body style="background-color:brown;">
+                <h1 style="color:purple;">everything is awesome unless it is not</h1>
+                <p id="demo"></p>
+                <script>
+                        document.getElementById("demo").innerHTML = "Life is the fruitless search of distractions that all lead to the impending doom of death"
+                </script>
+                <canvas id="myCanvas" width="800" height="400" style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+
+                <script>
+
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.rect(20, 20, 150, 100);
+                ctx.rect(30, 30, 150,100);
+                ctx.rect(40, 40, 150,100);
+                ctx.stroke();
+
+                </script>
+		<div id="time"></div>
+
+<script>
+function updateClock() {
+    var now = new Date(), // current date
+        months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',]; // you get the idea
+        time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(), // again, you get the idea
+
+        // a cleaner way than string concatenation
+        date = [now.getDate(),
+                months[now.getMonth()],
+                now.getFullYear()].join(' ');
+
+    // set the content of the element with the ID time to the formatted string
+    document.getElementById('time').innerHTML = [date, time].join(' / ');
+
+    // call this function again in 1000ms
+    setTimeout(updateClock, 1000);
+}
+updateClock(); // initial call
+</script>
+		
+
+                
+    <!--            <button onclick="getElementById('button').innerHTML=Date()">The time is?</button>
+                <p id="button"></p> -->
+		<a href="/hi.gov">This Is pretty boring</a> 
+		<br>
+		<a href="/particle.html">particles oooh aaah</a>	
+
+
+
+
+        </body>
+
+</html>
+
+
